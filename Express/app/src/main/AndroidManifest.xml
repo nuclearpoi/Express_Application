@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bmob.express">
+
+    <!--允许联网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--获取GSM（2g）、WCDMA（联通3g）等网络状态的信息  -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--保持CPU 运转，屏幕和键盘灯有可能是关闭的,用于文件上传和下载 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!--允许读取手机状态 用于创建BmobInstallation-->
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name="com.bs.express.base.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data android:name="android.max_aspect"
+            android:value="2.4"/>
+        <activity android:name="com.bs.express.ui.activity.GuideActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.bs.express.ui.activity.LoginActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name="com.bs.express.ui.activity.UserInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.bs.express.ui.activity.SubmitImageActivity"
+            android:theme="@style/Theme_dialog"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.bs.express.ui.activity.ChangeActivity"
+            android:screenOrientation="portrait" />
+
+        <activity android:name="com.bs.express.ui.activity.HomeActivity"/>
+        <activity android:name="com.bs.express.ui.activity.RegisterActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.bs.express.ui.activity.SearchActivity"/>
+        <activity android:name="com.bs.express.ui.activity.NewOrderActivity"/>
+        <activity android:name="com.bs.express.ui.activity.OrderDetailActivity"/>
+        <activity android:name="com.bs.express.ui.activity.AddressListActivity"/>
+        <activity android:name="com.bs.express.ui.activity.AddAddressActivity"/>
+        <activity android:name="com.bs.express.ui.activity.WorkListActivity"/>
+        <activity android:name="com.bs.express.ui.activity.WordDetailActivity"/>
+    </application>
+
+</manifest>
