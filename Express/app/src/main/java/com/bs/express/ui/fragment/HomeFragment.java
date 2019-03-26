@@ -87,11 +87,11 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             case R.id.bt_search:
                 String no = etNum.getText().toString();
                 if(TextUtils.isEmpty(no)){
-                    Toast.makeText(getActivity(),"请输入快递单号",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(),"Please enter the express number!",Toast.LENGTH_SHORT).show();
                     return;
                 }
                 if(TextUtils.isEmpty(companyCode)){
-                    Toast.makeText(getActivity(),"请选择快递公司",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(),"Please choose the express company!",Toast.LENGTH_SHORT).show();
                     return;
                 }
                 ((HomeActivity)getActivity()). showProgressDialog(getActivity(),"loading...");
